@@ -7,12 +7,21 @@
 
 <p>
   <strong>Artist:</strong>
-  <%= @album.artist_id %>
+  <%= @album.artist.name %>
 </p>
 
 <p>
   <strong>Genre:</strong>
-  <%= @album.genre_id %>
+  <%= @album.genre.name %>
+</p>
+
+<p>
+	<strong>Songs:</strong>
+<ul>
+<%= @album.songs.each do |song| %>
+	<li><%= song.name %></li>
+<% end %>
+</ul>
 </p>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |

@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+.lead_heading {
+	color: blue;
+	font-family: papyrus;
+	font-size: 30px;
+}
+
+.grouping {
+	color: white;
+	border: 1px solid white;
+	font-family: copperplate;
+	font-size: 20px;
+	position: relative;
+	margin-top: 15px;
+	margin-left: 80px;
+	padding: 5px;
+}
+
+.grouping_small {
+	color: red;
+	border: 1px blue solid;
+	font-family: arial;
+	font-size: 18px;
+	width: 200px;
+	height: 60px;
+	position: relative;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+body {
+	background: black;
+
+
+}

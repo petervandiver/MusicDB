@@ -12,8 +12,27 @@
 
 <p>
   <strong>Genre:</strong>
-  <%= @artist.genre_id %>
+  <%= @artist.genre.name %>
 </p>
+
+<p>
+	<h3>Albums:</h3>
+<% @artist.albums.each do |album| %>
+<ul>
+	<li><%= album.title %></li>
+</ul>
+<% end %>
+</p>
+
+<p>
+	<h3>Songs:</h3>
+<% @artist.songs.each do |song| %>
+<ul>
+	<li><%= song.name %></li>
+</ul>
+<% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

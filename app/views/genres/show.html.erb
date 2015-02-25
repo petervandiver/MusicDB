@@ -1,9 +1,48 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Type:</strong>
-  <%= @genre.type %>
+  <h2 class="lead_heading">
+  <%= @genre.name %>
+  </h2>
 </p>
+
+
+
+	<h3>Artists:</h3>
+<% @genre.artists.each do |artist| %>
+<div class= "grouping">
+<ul>
+	<li><strong><%= artist.name %></strong> - <%= artist.bio %><br/></li><%= link_to 'Edit', edit_artist_path %></li>
+</ul>
+
+			<strong>Albums</strong>
+
+			<div class="grouping_small">
+				<% artist.albums.each do |album| %>
+				<ul>
+					<li><%= album.title %></li>
+				</ul>	
+			</div>
+			<% end %>
+</div>
+<% end %>
+
+
+
+</p>
+<p>
+	<h3>Songs:</h3>
+<ul>
+<% @genre.songs.each do |song| %>
+	<li><% song.name %></li>
+<% end %>
+</ul>
+</p>
+
+
+</p>
+
+
+
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>
