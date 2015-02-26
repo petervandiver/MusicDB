@@ -8,4 +8,5 @@ validates :name, presence: true
 validates :name, length: {maximum: 30}
 validates :name, uniqueness: true
 
+mount_uploader :cover, CoverUploader
 end
